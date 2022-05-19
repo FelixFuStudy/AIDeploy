@@ -1,10 +1,19 @@
 # AIDeploy
 Env
+
 # ONNXRUNTIME Windows
 OnnxRuntimeWindowsCPP/.vs
 OnnxRuntimeWindowsCPP/x64
 x64
 
+# ONNXRUNTIME Windows Python
+__pycache__
+*.pyc
+.idea
+
+# TensorRT Windows CPP
+.vs
+x64
 
 # ------------------------
 # Prerequisites
