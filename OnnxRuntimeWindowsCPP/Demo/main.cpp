@@ -286,7 +286,7 @@ int main()         // 返回值为整型带参的main函数. 函数体内使用或不使用argc和argv
 	{
 		// 1. 模型参数设置
 		Params params;
-		params.onnxFilePath = "E:\\AIDeploy\\Env\\DemoData\\anomaly\\onnxs\\PaDiM2_b36.onnx";
+		params.onnxFilePath = "E:\\AIDeploy\\Env\\DemoData\\anomaly\\onnxs\\PaDiM2_b8.onnx";
 		params.log_path = "D:/log.txt";
 		params.netType = FF_ANOMALY;
 		params.meanValue = { 0.335782, 0.335782, 0.335782 };
@@ -299,7 +299,7 @@ int main()         // 返回值为整型带参的main函数. 函数体内使用或不使用argc和argv
 
 		// 3. 输入数据
 		std::vector<std::string> file_names;
-		cv::glob("E:/AIDeploy/Env/DemoData/anomaly/images/*.bmp", file_names);
+		cv::glob("E:/AIDeploy/Env/DemoData/anomaly/images_16/*.bmp", file_names);
 		int batch_size, channels, height, width;
 		ortAPI.getInputDimsK(ctx, batch_size, channels, height, width); // 获得onnx中的输入维度
 
@@ -362,7 +362,7 @@ int main()         // 返回值为整型带参的main函数. 函数体内使用或不使用argc和argv
 					outputs[k]->imagedata_,
 					outputs[k]->imagestep_).clone();
 
-				cv::imwrite(outputs_files[k], tmp);
+				cv::imwrite(outputs_files[batch_size*nn+k], tmp);
 			}
 		}// 假如图片很多，需要循环多次来处理
 		break;

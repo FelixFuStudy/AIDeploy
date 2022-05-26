@@ -112,7 +112,7 @@ int ORTAPI::anomaly(
 	for (int i = 0; i < output_images.size(); i++) {
 		cv::threshold(output_images[i], output_images[i], threshold, pixel_value, cv::THRESH_BINARY);
 		output_images[i].convertTo(output_images[i], CV_8U);
-		//cv::imwrite("E:/test/" + std::string(std::to_string(i)) + ".png", output_images[i]);
+		cv::imwrite("E:/test/" + std::string(std::to_string(i)) + ".png", output_images[i]);
 	}
 	int height = ctx.get()->session.get()->mInputDims[0][2];
 	int width = ctx.get()->session.get()->mInputDims[0][3];
