@@ -125,27 +125,28 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..\Env\trtDevLibs\include\cuda;$(SolutionDir)..\..\..\Env\trtDevLibs\include\opencv;$(SolutionDir)..\..\..\Env\trtDevLibs\include\tensorrt;$(SolutionDir)..\..\..\Env\trtDevLibs\include\tensorrt\samples\common;$(SolutionDir)..\..\..\Env\trtDevLibs\include\tensorrt\samples\common\windows;%(AdditionalUsingDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Env\trtDevLibs\include\cuda;$(SolutionDir)..\Env\trtDevLibs\include\opencv;$(SolutionDir)..\Env\trtDevLibs\include\tensorrt;$(SolutionDir)..\Env\trtDevLibs\include\tensorrt\samples\common;$(SolutionDir)..\Env\trtDevLibs\include\tensorrt\samples\common\windows;%(AdditionalUsingDirectories);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalLibraryDirectories>$(SolutionDir)..\..\..\Env\trtDevLibs\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)..\Env\trtDevLibs\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>nvinfer.lib;nvinfer_plugin.lib;nvonnxparser.lib;nvparsers.lib;cudnn.lib;cublas.lib;cudart.lib;nvrtc.lib;opencv_world452.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="engine.h" />
-    <ClInclude Include="my_logger.h" />
+    <ClInclude Include="loguru.hpp" />
     <ClInclude Include="PARAMS.h" />
     <ClInclude Include="TRTAPI.h" />
     <ClInclude Include="trtCore.h" />
+    <ClInclude Include="Utils.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="engine.cpp" />
-    <ClCompile Include="my_logger.cpp" />
+    <ClCompile Include="loguru.cpp" />
     <ClCompile Include="TRTAPI.cpp" />
     <ClCompile Include="trtCore.cpp" />
   </ItemGroup>

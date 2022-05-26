@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-// \! ---------定义初始化参数 Start------------
+
 
 // \! 定义网络类型
 enum NetWorkType
@@ -11,8 +11,10 @@ enum NetWorkType
 	LUSTER_SEG = 1,  //!< 分割网络
 	LUSTET_DET = 2,  //!< 检测网络
 	LUSTER_SIM = 3,  //!< 双流相似度网络
+	LUSTER_ANOMALY = 4,  //!< 异常检测网络
 };
 
+// \! 定义错误类型
 enum ErrorCode {
 	LY_OK = 0,               // 函数执行成功
 	LY_WRONG_CALL = 1,       // 错误的调用，比如说分割模型调用了分类的接口
@@ -41,8 +43,6 @@ struct Params
 
 };
 
-// \! ---------定义初始化参数 End------------
-
 // \! 分类返回结果
 typedef std::pair<int, float> ClassifyResult;
 
@@ -56,4 +56,7 @@ typedef struct BBox
 }DetectResult;
 
 // \! 分割返回结果
+// CoreImage
+
+// \! 异常检测返回结果
 // CoreImage

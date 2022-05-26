@@ -21,13 +21,16 @@
     <ClInclude Include="trtCore.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="my_logger.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="TRTAPI.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="PARAMS.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="loguru.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,10 +41,10 @@
     <ClCompile Include="trtCore.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="my_logger.cpp">
+    <ClCompile Include="TRTAPI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="TRTAPI.cpp">
+    <ClCompile Include="loguru.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
